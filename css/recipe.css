@@ -1,0 +1,341 @@
+/* General Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff9f0;
+}
+
+/* Navigation (scoped: do not target Bootstrap .navbar) */
+nav:not(.navbar) {
+    background-color: #ff8c00;
+    padding: 0.5rem 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+nav:not(.navbar) ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav:not(.navbar) ul li {
+    margin: 0 15px;
+}
+
+nav:not(.navbar) ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav:not(.navbar) ul li a:hover {
+    color: #333;
+}
+
+/* --- Restore Bootstrap navbar appearance (override earlier generic nav rules) --- */
+nav.navbar {
+    background-color: #f8f9fa !important; /* Bootstrap .bg-light */
+    padding: .5rem 1rem !important;
+    box-shadow: none !important;
+}
+
+
+nav.navbar .navbar-brand {
+    color: #e05a4f !important;
+}
+
+
+/* toggler visibility */
+nav.navbar .navbar-toggler {
+    border-color: rgba(0,0,0,.1) !important;
+}
+
+/* ensure collapsed menu uses Bootstrap defaults */
+nav.navbar .navbar-collapse {
+    background: transparent !important;
+}
+
+/* Headings */
+h1 {
+    color: #e62e00;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #ff6600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff8c00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #e65100;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Recipe Container */
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+
+/* Image Section */
+.image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ingredients Section (more interesting) */
+.ingredients {
+    flex: 1;
+    min-width: 300px;
+    padding: 2.4rem;
+    background: linear-gradient(180deg, #fffef8 0%, #fbf6ee 100%);
+    border-left: 6px solid #ff8c00;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    line-height: 1.6 !important;
+
+    /* typography */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1.05rem;
+    color: #2e2b28;
+    letter-spacing: 0.2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ingredients::before {
+    content: "🍌";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2.2rem;
+    opacity: 0.12;
+}
+
+.ingredients h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    color: #e65100;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.ingredients ul {
+    padding-left: 1.05rem;
+}
+
+.ingredients ul li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.25rem;
+    transition: transform .12s ease, color .12s ease;
+}
+
+.ingredients ul li:hover {
+    transform: translateX(4px);
+    color: #c04b00;
+}
+
+.ingredients ul li::marker {
+    color: #ff8c00;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Procedure Section (more interesting) */
+.procedure {
+    background: linear-gradient(180deg, #ffffff 0%, #fffaf6 100%);
+    padding: 2.2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    max-width: 1000px;
+    line-height: 2.0 !important;
+
+    /* typography */
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-size: 1.03rem;
+    color: #333333;
+    position: relative;
+}
+
+/* decorative faint icon */
+.procedure::before {
+    content: "↘";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 1.6rem;
+    color: #f4a261;
+    opacity: 0.08;
+}
+
+.procedure h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    color: #e65100;
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* numbered badge style */
+.procedure ol {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+}
+
+.procedure ol li {
+    counter-increment: step;
+    margin-bottom: 0.9rem;
+    padding-left: 48px;
+    position: relative;
+}
+
+.procedure ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background: #ff8c00;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* subtle emphasis for first sentence of each step */
+.procedure ol li strong,
+.procedure ol li b {
+    color: #c04b00;
+}
+
+/* YouTube Button */
+.youtube-link {
+    display: inline-block;
+    background-color: #ff0000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.youtube-link:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 8px;
+    font-size: 22px;   /* icon size */
+    text-decoration: none;
+}
+
+.social-links a .fa-facebook { color: #1877F2; }
+.social-links a .fa-instagram { color: #E1306C; }
+.social-links a .fa-x-twitter { color: #000000; }
+
+/* Homepage Special Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(255,140,0,0.6), rgba(255,140,0,0.6)), url('../images/street-food-bg.jpg') no-repeat center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipe-container {
+        flex-direction: column;
+    }
+
+    .ingredients {
+        border-left: none;
+        border-top: 4px solid #ff8c00;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Ensure Procedure uses 2.0 line spacing (explicitly target child elements) */
+.procedure,
+.procedure h3,
+.procedure p,
+.procedure ol,
+.procedure ol li {
+    line-height: 3.0 !important;
+}

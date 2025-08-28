@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - UTAR Eats</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/UTAREats.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- Add these inside the <head> tag -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="img/UTAREats.png" alt="UTAR Eats Logo" width="35" height="35" class="mr-2">
+            <span>UTAR Eats</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Street Food
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="malay-street-food.html">Malay</a>
+                        <a class="dropdown-item" href="chinese-street-food.html">Chinese</a>
+                        <a class="dropdown-item" href="indian-street-food.html">Indian</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="famous-streets.html">Famous Streets</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="foodjourney.html">Food Journey</a></li>
+                <li class="nav-item"><a class="nav-link" href="about-contact-feedback.html">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <li class="nav-item">
+                    <span id="login-status" class="btn btn-outline-secondary btn-sm mb-0 mr-2"
+                        style="pointer-events: none;">
+                        Not logged in
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <button id="login-btn" class="btn btn-outline-success btn-sm mr-2">Log In</button>
+                </li>
+                <li class="nav-item">
+                    <button id="logout-btn" class="btn btn-outline-danger btn-sm" style="display: none;">Log
+                        Out</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <input type="text" id="usernameInput" class="form-control mb-2" placeholder="Enter username"
+                            autofocus />
+
+                        <div class="input-group mb-2">
+                            <input type="password" id="passwordInput" class="form-control"
+                                placeholder="Enter password" />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword"
+                                    aria-label="Toggle password visibility">
+                                    👁
+                                </button>
+                            </div>
+                        </div>
+                        <small id="loginError" class="text-danger" style="display:none;"></small>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success" id="loginSubmit">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Street Food Adventures</h1>
+        <p class="subtitle">Take a bite out of Malaysia's vibrant street food culture</p>
+    </header>
+
+    <div class="posts-container">
+
+        
+        <a href="https://www.bondingexplorers.com/jalan-alor-food-street/" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/street.jpg" alt="Best Street Food in Bukit Bintang">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Best Street Food in Bukit Bintang</div>
+                <div class="post-source"> 📍Bukit Bintang Jalan Alor</div>
+            </div>
+        </a>
+
+       
+        <a href="https://kualalumpur.intercontinental.com/blog/local-breakfast-dishes-for-your-mornings"
+            class="post-card" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/bread.png" alt="The local breakfast for Malaysian">
+            </div>
+            <div class="post-content">
+                <div class="post-title">The local breakfast for Malaysian</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.tripadvisor.com.my/Restaurant_Review-g298298-d30110407-Reviews-Cuisines_The_Restaurant_Tui_Blue-Ipoh_Kinta_District_Perak.html" 
+            class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/food.jpg" alt="Perfect Food Crawl Weekend">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Perfect Food Crawl Weekend</div>
+                <div class="post-source"> 📍Cuisines The Restaurant Tui Blue</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.facebook.com/share/v/16xM32MtPV/"
+            class="post-card" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/JonkerStreet.jpg" alt="The Best Night Markets in Malaysia for Street Food">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Malacca Jonker Street Food: A Heritage Flavors Tour</div>
+                <div class="post-source"> 📍Jonker Street</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.facebook.com/share/r/19dVuoHr8x/" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/hawker.jpg" alt="How to Eat Like a Local at Malaysia">
+            </div>
+            <div class="post-content">
+                <div class="post-title">How to Eat Like a Local at Malaysia</div>
+            </div>
+        </a>
+
+       
+        <a href="https://www.facebook.com/share/p/1BEA7JLSHN/" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/currymee.jpg" alt="Vegetarian-Friendly Malaysian Street Food">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Vegetarian-Friendly Malaysian Street Food</div>
+                <div class="post-source"> 📍8-10, Jalan Lim Bo Seng, Kampung Jawa, 30300 Ipoh, Perak</div>
+            </div>
+        </a>
+
+       
+        <a href="https://www.facebook.com/share/v/1Et4gX72FW/" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/roti tisu.jpg" alt="Roti Tisu Malaysia">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Roti Tisu Reaches New Heights: Malaysia’s Edible Twin Tower!</div>
+                <div class="post-source"> 📍Sri Petaling Restoran Aliff</div>
+            </div>
+        </a>
+
+       
+        <a href="https://www.instagram.com/p/CfV5JFypQhO/?utm_source=ig_web_copy_link" class="post-card"
+            target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/night.avif" alt="Late-Night Street Food in KL">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Midnight Munchies: Where to Find Late-Night Street Food in KL</div>
+                <div class="post-source"> 📍Kantin Mini @ Kampung Baru</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.facebook.com/share/r/1H6vUWV6SP/"
+            class="post-card" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/bazaar.jpg" alt="Ramadan Bazaars Malaysia">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Ramadan Bazaars in Malaysia: A Street Food Extravaganza</div>
+                <div class="post-source"> 📍Pasar Datuk Keramat</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.touchngo.com.my/blog/peranakan-food-guide-malaysia/" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/nyonya.jpg" alt="Nyonya Food Malaysia">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Nyonya Flavors : Malaysia Peranakan Food Gems</div>
+                <div class="post-source"> 📍Big Baba</div>
+            </div>
+        </a>
+
+        
+        <a href="https://www.cordonbleu.edu/malaysia/blog-edible-traditions-10-dishes-that-define-chinese-new-year-in-malaysia/en" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/Newyear.jpg" alt="Chinese New Year Foods Malaysia">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Festival Feasts: Foods must Try During CNY</div>
+            </div>
+        </a>
+
+     
+        <a href="https://www.ipacktravel.com/post/the-quest-for-hokkien-mee-fu-jian-mian" class="post-card" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="post-image">
+                <img src="img/mee.jpg" alt="Hokkien Mee KL vs Penang">
+            </div>
+            <div class="post-content">
+                <div class="post-title">Hokkien Mee Showdown: KL vs. Penang Style - Which Wins?</div>
+            </div>
+        </a>
+
+    </div>
+
+    <footer>
+        <p>&copy; Utar Eats. All rights reserved.</p>
+        <div class="social-links">
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61579873584888" target="_blank"><i
+                        class="fab fa-facebook"></i></a> |
+                <a href="https://www.instagram.com/utareats" target="_blank"><i class="fab fa-instagram"></i></a> |
+                <a href="https://x.com/UTAREats" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> 
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/logIn.js"></script>
+
+
+</html>

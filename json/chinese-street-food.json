@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hokkien-mee",
+    "name": "Hokkien Mee",
+    "description": "Thick yellow noodles braised in dark soy sauce with pork, squid and crispy lard.",
+    "img": "img/hokkien_mee.jpg",
+    "link": "hokkien-mee.html"
+  },
+  {
+    "id": "wantan-mee",
+    "name": "Wantan Mee",
+    "description": "Thin egg noodles served with wantan dumplings, BBQ pork and leafy greens.",
+    "img": "img/wantan_mee.jpg",
+    "link": "wantan-mee.html"
+  },
+  {
+    "id": "char-kuey-teow",
+    "name": "Char Kuey Teow",
+    "description": "Wok-fried flat noodles with prawns, eggs, bean sprouts and chili.",
+    "img": "img/char_kuey_teow.jpg",
+    "link": "char-kuey-teow.html"
+  },
+  {
+    "id": "chee-cheong-fun",
+    "name": "Chee Cheong Fun",
+    "description": "Soft rice noodle rolls topped with sweet sauce and sesame seeds.",
+    "img": "img/chee_cheong_fun.jpg",
+    "link": "chee-cheong-fun.html"
+  },
+  {
+    "id": "tanghulu",
+    "name": "Tanghulu",
+    "description": "Candied fruits on a stick – a crunchy sweet street snack.",
+    "img": "img/tanghulu.jpg",
+    "link": "tanghulu.html"
+  },
+  {
+    "id": "jianbing",
+    "name": "Jianbing",
+    "description": "A savory Chinese street crepe filled with egg, herbs, and crispy layers.",
+    "img": "img/jianbing.jpg",
+    "link": "jianbing.html"
+  }
+]

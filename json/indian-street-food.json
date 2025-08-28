@@ -1,0 +1,44 @@
+[
+  {
+    "id": "roti-canai",
+    "name": "Roti Canai",
+    "description": "Crispy, buttery Indian flatbread with soft, flaky layers served with curry.",
+    "img": "img/roti.jpg",
+    "link": "roti.html"
+  },
+  {
+    "id": "vada-pav",
+    "name": "Vada Pav",
+    "description": "Deep-fried potato dumpling placed inside a bread bun, served with chutneys and chili.",
+    "img": "img/vada.jpg",
+    "link": "vada.html"
+  },
+  {
+    "id": "masala-dosa",
+    "name": "Masala Dosa",
+    "description": "Crispy pan-roasted batter served with potato curry, chutneys and sambar.",
+    "img": "img/dosa.jpg",
+    "link": "dosa.html"
+  },
+  {
+    "id": "samosa",
+    "name": "Samosa",
+    "description": "Deep-fried pastry pockets filled with spiced potatoes and peas, served with coriander chutney.",
+    "img": "img/samosa.jpg",
+    "link": "samosa.html"
+  },
+  {
+    "id": "gulab-jamun",
+    "name": "Gulab Jamun",
+    "description": "Fried dough balls soaked in sugar syrup flavored with cardamom and rose water.",
+    "img": "img/gulab.jpg",
+    "link": "gulab.html"
+  },
+  {
+    "id": "banana-leaf-rice",
+    "name": "Banana Leaf Rice",
+    "description": "Rice served on a banana leaf with curries, vegetables, pickles and papadum.",
+    "img": "img/banana.jpg",
+    "link": "banana.html"
+  }
+]

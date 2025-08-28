@@ -1,0 +1,44 @@
+[
+  {
+    "id": "Nasi-Lemak",
+    "name": "Nasi Lemak",
+    "description": "Rice cooked in coconut milk and pandan leaf served with sambal.",
+    "img": "img/NasiLemak.jpg",
+    "link": "NasiLemak.html"
+  },
+  {
+    "id": "Murtabak",
+    "name": "Murtabak",
+    "description": "A Yemeni stuffed pancake or pan-fried bread.",
+    "img": "img/Murtabak.jpg",
+    "link": "Murtabak.html"
+  },
+  {
+    "id": "Otak-Otak",
+    "name": "Otak-otak",
+    "description": "Grilled fishcake, often wrapped in banana leaves.",
+    "img": "img/Otak-otak.jpg",
+    "link": "otak-otak.html"
+  },
+  {
+    "id": "Sate",
+    "name": "Sate",
+    "description": "Skewered and grilled meat served with peanut sauce.",
+    "img": "img/sate.jpg",
+    "link": "Sate.html"
+  },
+  {
+    "id": "Chicken-Rendang",
+    "name": "Chicken Rendang",
+    "description": "Tender chicken stewed in coconut milk and spices.",
+    "img": "img/chicken-rendang.jpg",
+    "link": "Chicken-rendang.html"
+  },
+  {
+    "id": "Pisang-Goreng",
+    "name": "Pisang Goreng",
+    "description": "Battered fried bananas.",
+    "img": "img/PisangGoreng.jpg",
+    "link": "PisangGoreng.html"
+  }
+]

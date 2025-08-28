@@ -1,0 +1,346 @@
+/* import nicer web fonts (falls back if blocked) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap');
+
+body {
+  font-family: 'Rubik', 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff9f5;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 249, 245, 0.9);
+  padding-top: 70px;
+  /* Adjust to match the height of your navbar */
+  color: #333;
+}
+
+/* Hero headings: modern display with gradient text and soft shadow */
+h1 {
+  font-family: 'Poppins', 'Rubik', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  background: linear-gradient(90deg, #ff6a00 0%, #ffb86b 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 6px 16px rgba(255, 110, 20, 0.08);
+}
+
+/* Section subheads with playful accent */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  margin: 1.2em 0 0.5em 0;
+  font-weight: 700;
+  color: #2b2b2b;
+  display: inline-block;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 60%;
+  background: linear-gradient(90deg, #ffb86b, #ff8c00);
+  border-radius: 4px;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* Subheads inside cards & sections */
+h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.25rem;
+  color: #3a2f24;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Paragraphs: more airy and readable; add subtle first-letter drop-cap for longer blocks */
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Drop cap for longer descriptive paragraphs */
+p.lead:first-letter,
+.card-content p:first-letter {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #e65a00;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+/* Grid and Cards remain same */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #ff6a00;
+  letter-spacing: 0.4px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.card-content a {
+  color: #e65a00;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* small inline highlight for ingredients/keywords */
+.highlight {
+  background: linear-gradient(90deg, #fff1e6, #fff3ea);
+  border-radius: 6px;
+  padding: 0.06rem 0.35rem;
+  color: #c24b00;
+  font-weight: 600;
+}
+
+/* --- Interactive content word styles (do NOT touch navbar or footer) --- */
+
+/* Inline interactive words — wrap with <span class="interactive">...</span> */
+.interactive,
+.highlight {
+  display: inline-block;
+  background: linear-gradient(90deg, #fff7f0, #fff9f3);
+  border-radius: 8px;
+  padding: 0.08rem 0.45rem;
+  color: #c24b00;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .14s ease, box-shadow .14s ease, color .12s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.interactive:hover,
+.highlight:hover {
+  transform: translateY(-4px) scale(1.03);
+  color: #e65a00;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* Card title (h4.card-title) — gradient text + float-up on hover */
+.row.text-center .card .card-title,
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  transition: transform .18s ease, text-shadow .18s ease;
+  background: linear-gradient(90deg, #ff6a00, #ffb86b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.row.text-center .card:hover .card-title {
+  transform: translateY(-8px);
+  text-shadow: 0 10px 24px rgba(255, 110, 20, 0.08);
+}
+
+/* Card paragraph micro interaction */
+.row.text-center .card .card-text {
+  transition: transform .2s ease, color .12s ease;
+  color: #555;
+}
+
+.row.text-center .card:hover .card-text {
+  transform: translateY(-6px);
+  color: #333;
+}
+
+/* Button accents inside each card (targets the three cards on the homepage) */
+.row.text-center>.col-md-4:nth-child(1) .card {
+  /* Malay */
+  border-top: 6px solid #ff8c00;
+}
+
+.row.text-center>.col-md-4:nth-child(1) .card .card-title {
+  color: #ff8c00;
+  -webkit-text-fill-color: initial;
+}
+
+.row.text-center>.col-md-4:nth-child(1) .card .btn {
+  background: linear-gradient(90deg, #cc6a00, #ffb86b);
+  border: none;
+  color: #fff;
+}
+
+/* Chinese */
+.row.text-center>.col-md-4:nth-child(2) .card {
+  border-top: 6px solid #c5302e;
+}
+
+.row.text-center>.col-md-4:nth-child(2) .card .card-title {
+  color: #c5302e;
+  -webkit-text-fill-color: initial;
+}
+
+.row.text-center>.col-md-4:nth-child(2) .card .btn {
+  background: linear-gradient(90deg, #c5302e, #f87171);
+  border: none;
+  color: #fff;
+}
+
+/* Indian */
+.row.text-center>.col-md-4:nth-child(3) .card {
+  border-top: 6px solid #b45309;
+}
+
+.row.text-center>.col-md-4:nth-child(3) .card .card-title {
+  color: #b45309;
+  -webkit-text-fill-color: initial;
+}
+
+.row.text-center>.col-md-4:nth-child(3) .card .btn {
+  background: linear-gradient(90deg, #c05621, #f6ad55);
+  border: none;
+  color: #fff;
+}
+
+/* Slight lift for the card button */
+.row.text-center .card .btn {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.row.text-center .card .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+/* Decorative underline for card headings (subtle) */
+.row.text-center .card .card-title::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 60%;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, #ffb86b, #ff6a00);
+  border-radius: 4px;
+  opacity: 0.14;
+}
+
+.row.text-center .card:hover .card-title::after {
+  opacity: 0.95;
+}
+
+footer {
+  background-color: #333;
+  color: #fff9f2 !important;
+  /* Force light cream color */
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #fff9f2 !important;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #fff9f2 !important;
+  text-decoration: none;
+}
+
+/* Social icons */
+.social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links a .fa-facebook {
+  color: #1877F2;
+}
+
+.social-links a .fa-instagram {
+  color: #E1306C;
+}
+
+.social-links a .fa-x-twitter {
+  color: #000000;
+}
