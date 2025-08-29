@@ -200,7 +200,6 @@ function renderFoodItems() {
 // --- FILTERS ---
 function filterItems(type) {
     currentFilter = type;
-    sessionStorage.setItem('currentFilter', type);
 
     const items = document.querySelectorAll('.food-card');
     let visibleCount = 0;
@@ -250,11 +249,4 @@ window.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
         });
     });
-
-    const storedFilter = sessionStorage.getItem('currentFilter');
-    if (storedFilter) {
-        filterItems(storedFilter);
-        const activeBtn = document.querySelector(`#food-filters button[data-filter="${storedFilter}"]`);
-        if (activeBtn) activeBtn.classList.add('active');
-    }
 });
